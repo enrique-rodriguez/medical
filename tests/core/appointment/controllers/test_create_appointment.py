@@ -10,7 +10,7 @@ class TestCreateAppointmentController(ControllerTestCases):
 
     def setUp(self):
         self.mock_handler = mock.Mock()
-        self.controller = CreateAppointmentController(handler=self.mock_handler)
+        self.controller = CreateAppointmentController(create_appointment_handler=self.mock_handler)
         self.request = HttpRequest(body=dict())
     
     def test_handler_handles_appropriate_command(self):

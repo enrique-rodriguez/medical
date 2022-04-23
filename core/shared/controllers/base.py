@@ -3,9 +3,8 @@ import abc
 
 class Controller(abc.ABC):
 
-    def __init__(self, handler, method="GET", status=500, data=None):
+    def __init__(self, method="GET", status=500, data=None):
         self.method = method
-        self.handler = handler
         self.status_code = status
         self.response_data = data or {}
     

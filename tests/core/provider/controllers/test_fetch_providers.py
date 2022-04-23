@@ -8,7 +8,7 @@ class TestCreateAppointmentController(ControllerTestCases):
 
     def setUp(self):
         self.mock_handler = mock.Mock()
-        self.controller = FetchProvidersController(handler=self.mock_handler)
+        self.controller = FetchProvidersController(fetch_providers_handler=self.mock_handler)
         self.request = HttpRequest(body=dict(), query=dict())
     
     def test_gives_200_after_fetching_providers(self):

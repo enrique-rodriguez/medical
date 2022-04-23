@@ -1,13 +1,14 @@
+from core.provider.application.create_provider.handler import CreateProviderHandler
 from core.shared.controllers import Controller
-from core.provider.application.create_provider import CreateProviderCommand
-from core.provider.application import create_provider_handler
 from core.shared.domain.exceptions import AlreadyExistsError
+from core.provider.application.create_provider import CreateProviderCommand
 
 
 class CreateProviderController(Controller):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, create_provider_handler: CreateProviderHandler, *args, **kwargs):
         super().__init__(method="POST", status=201, data={}, *args, **kwargs)
+        self.create_provider_handler = create_provider_handler
 
     def dispatch(self, request):
         command = CreateProviderCommand(
@@ -16,6 +17,6 @@ class CreateProviderController(Controller):
         )
 
         try:
-            create_provider_handler(command)
+            self.create_provider_handler(command)
         except AlreadyExistsError as error:
             self.status(400).data({ 'msg': str(error) })

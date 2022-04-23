@@ -1,11 +1,13 @@
+from core.provider.application.fetch_providers.handler import FetchProvidersHandler
 from core.shared.controllers import Controller
 from core.provider.application.fetch_providers import FetchProvidersQuery
 
 
 class FetchProvidersController(Controller):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, fetch_providers_handler: FetchProvidersHandler, *args, **kwargs):
         super().__init__(status=200, data={}, *args, **kwargs)
+        self.fetch_providers_handler = fetch_providers_handler
 
     def dispatch(self, request):
         query = FetchProvidersQuery(
@@ -13,4 +15,4 @@ class FetchProvidersController(Controller):
             provider_specialty_name=request.query.get("specialty"),
         )
 
-        self.data(self.handler(query))
+        self.data(self.fetch_providers_handler(query))
