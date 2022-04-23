@@ -1,0 +1,420 @@
+[
+{
+  "model": "api.specialtymodel",
+  "pk": 1,
+  "fields": {
+    "name": "Chief Medical Officer"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 2,
+  "fields": {
+    "name": "Anesthesiologist"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 3,
+  "fields": {
+    "name": "Cardiology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 4,
+  "fields": {
+    "name": "Neurosurgeon"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 5,
+  "fields": {
+    "name": "Allergy and immunology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 6,
+  "fields": {
+    "name": "Anesthesiology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 7,
+  "fields": {
+    "name": "Dermatology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 8,
+  "fields": {
+    "name": "Diagnostic radiology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 9,
+  "fields": {
+    "name": "Emergency medicine"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 10,
+  "fields": {
+    "name": "Family medicine"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 11,
+  "fields": {
+    "name": "Internal medicine"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 12,
+  "fields": {
+    "name": "Medical genetics"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 13,
+  "fields": {
+    "name": "Neurology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 14,
+  "fields": {
+    "name": "Nuclear medicine"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 15,
+  "fields": {
+    "name": "Obstetrics and gynecology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 16,
+  "fields": {
+    "name": "Ophthalmology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 17,
+  "fields": {
+    "name": "Pathology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 18,
+  "fields": {
+    "name": "Pediatrics"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 19,
+  "fields": {
+    "name": "Physical medicine and rehabilitation"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 20,
+  "fields": {
+    "name": "Preventive medicine"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 21,
+  "fields": {
+    "name": "Psychiatry"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 22,
+  "fields": {
+    "name": "Radiation oncology"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 23,
+  "fields": {
+    "name": "Surgery"
+  }
+},
+{
+  "model": "api.specialtymodel",
+  "pk": 24,
+  "fields": {
+    "name": "Urology"
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 1,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Walter White",
+    "specialty": 1
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 2,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Sarah Jhonson",
+    "specialty": 2
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 3,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "William Anderson",
+    "specialty": 3
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 4,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Amanda Jepson",
+    "specialty": 4
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 5,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Damjana Wilfreda Korrapati",
+    "specialty": 20
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 6,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Damjana Wilfreda Korrapati",
+    "specialty": 18
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 7,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Herleva Varvara Alfons",
+    "specialty": 22
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 8,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Raj Tycho Fujioka",
+    "specialty": 1
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 9,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Arsenios Imke Serrano",
+    "specialty": 7
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 10,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Anzhelika Puja Haanraads",
+    "specialty": 3
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 11,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Ernest Prashant Mendel",
+    "specialty": 12
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 12,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Nives Prakash Prohászka",
+    "specialty": 16
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 13,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Rišo Bhavna Fay",
+    "specialty": 16
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 14,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Bohumil Renie Malloye",
+    "specialty": 12
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 15,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Isacco Nicușor MacBay",
+    "specialty": 16
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 16,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Numitor Lakshmana Seabrooke",
+    "specialty": 17
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 17,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Bozhidara Faraji Cortés",
+    "specialty": 6
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 18,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Cassiopea Arif Rogerson",
+    "specialty": 21
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 19,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Fionnlagh Crocetta Burns",
+    "specialty": 17
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 20,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Oluwafemi Zosimus Montgomery",
+    "specialty": 16
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 21,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Yewande Acheloios Snaijer",
+    "specialty": 24
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 22,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Katrijn Orpheus Černý",
+    "specialty": 24
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 23,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Ba'al Zevuv Mirjana Ó Murchadha",
+    "specialty": 4
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 24,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Swapna Rigmor Randrup",
+    "specialty": 16
+  }
+},
+{
+  "model": "api.providermodel",
+  "pk": 25,
+  "fields": {
+    "created": "2022-04-21T21:05:52.367Z",
+    "approved": "2022-04-21T21:05:52.367Z",
+    "full_name": "Atanasija Ofeliya Dubanowski",
+    "specialty": 6
+  }
+}
+]

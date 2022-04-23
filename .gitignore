@@ -1,0 +1,10 @@
+# enviroment
+.env
+
+# coverage
+.coverage
+htmlcov/
+
+# Django
+
+db.sqlite3

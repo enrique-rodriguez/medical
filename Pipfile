@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+dev="bash ./scripts/dev.sh"
+start="gunicorn medical.wsgi:application -b 0.0.0.0:8000"
+test="python manage.py test"
+coverage="bash ./scripts/coverage.sh"
+setup="bash ./scripts/setup.sh"
+clean="bash ./scripts/clean.sh"
+dump="bash ./scripts/dump.sh"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+gunicorn = "*"
+
+[dev-packages]
+autopep8 = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.9"
