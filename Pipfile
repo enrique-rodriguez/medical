@@ -16,6 +16,7 @@ dump="bash ./scripts/dump.sh"
 django = "*"
 djangorestframework = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 autopep8 = "*"
