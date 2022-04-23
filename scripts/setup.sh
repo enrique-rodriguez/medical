@@ -66,7 +66,7 @@ setup() {
     create_env_file "$env_file"
     create_database "$db_file" "$fixtures_files"
     create_user "$test_username" "$test_user_password"
-    printf "✅ Done. Run 'pipenv run dev' to start development server.\n"
+    printf "✅ Done."
 }
 
 
