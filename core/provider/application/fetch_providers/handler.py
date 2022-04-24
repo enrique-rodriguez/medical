@@ -9,10 +9,8 @@ class FetchProvidersHandler(QueryHandler):
         self.provider_db = provider_db
     
     def handle(self, query: FetchProvidersQuery):
-
-        providers = self.provider_db.fetch({
-            "full_name": query.provider_name,
-            "specialty": query.provider_specialty_name
-        })
+        name = query.provider_name
+        specialty = query.provider_specialty_name
+        providers = self.provider_db.fetch(name=name, specialty=specialty)
 
         return [vars(provider) for provider in providers]

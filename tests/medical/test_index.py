@@ -1,4 +1,4 @@
-from medical.urls import index
+from medical.views import index
 from django.test import TestCase
 from django.urls import resolve, reverse
 

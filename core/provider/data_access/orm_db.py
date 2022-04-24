@@ -9,12 +9,7 @@ class OrmSpecialtyDB(OrmDatabase):
 
 
 class OrmProviderDB(OrmDatabase, ProviderDatabase):
-    entity = Provider
     model = ProviderModel
-    filters = {
-        "full_name": "full_name__icontains",
-        "specialty": "specialty__name__icontains",
-    }
 
     def __init__(self, specialty_db=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -38,3 +33,12 @@ class OrmProviderDB(OrmDatabase, ProviderDatabase):
         )
 
         return models.exists()
+    
+    def fetch(self, name=None, specialty=None):
+        models = self.model.objects.get_queryset()
+        if name:
+            models = models.filter(full_name__icontains=name)
+        if specialty:
+            models = models.filter(specialty__name__icontains=specialty)
+
+        return [self.to_entity(model) for model in models]

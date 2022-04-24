@@ -21,20 +21,7 @@ class OrmDatabase(Database):
             return None
         
         return self.to_entity(objects[0])
-    
-    def fetch(self, criteria):
-        """
-        Fetches objects using a search criteria
-        """
-
-        models = self.model.objects.get_queryset()
-
-        for filter, mapping in self.filters.items():
-            value = criteria.get(filter)
-            if not value: continue
-            models = models.filter(**{mapping: value})
-
-        return [self.to_entity(model) for model in models]
+        
     
     def to_entity(self, model):
         """

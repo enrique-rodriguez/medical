@@ -63,10 +63,9 @@ class TestOrmProviderDB(TestCase):
             "specialty": "abc"
         })
 
-        providers = [vars(obj) for obj in self.provider_db.fetch({
-            "full_name": "DEF",
-            'specialty': "def"
-        })]
+        objs = self.provider_db.fetch(name="DEF", specialty="def")
+
+        providers = [vars(obj) for obj in objs]
 
         self.assertEqual(providers, [])
 
@@ -74,7 +73,7 @@ class TestOrmProviderDB(TestCase):
 
         self.create_providers_for_fetch()
 
-        providers = [vars(obj) for obj in self.provider_db.fetch({"full_name": "ABC"})]
+        providers = [vars(obj) for obj in self.provider_db.fetch(name="ABC")]
 
         self.assertEqual(providers, [
             {
@@ -89,7 +88,7 @@ class TestOrmProviderDB(TestCase):
 
         self.create_providers_for_fetch()
 
-        providers = [vars(obj) for obj in self.provider_db.fetch({'specialty': "abc"})]
+        providers = [vars(obj) for obj in self.provider_db.fetch(specialty="abc")]
 
         self.assertEqual(providers, [
             {

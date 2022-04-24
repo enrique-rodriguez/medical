@@ -7,5 +7,5 @@ class ProviderDatabase(Database):
     entity = Provider
 
     @abc.abstractmethod
-    def fetch(self, data):
+    def fetch(self, name, specialty):
         "Child classes must implement this method."
