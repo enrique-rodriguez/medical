@@ -5,7 +5,7 @@ This project consists of building a prototype version of a Medical Provider Mark
 ## Installation
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/enrique-rodriguez/medical-backend/master/install/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/enrique-rodriguez/medical/master/install/install.sh)"
 ```
 
 Paste that in a macOS Terminal or Linux shell prompt.

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 REQUIRED="git pipenv npm"
-MEDICAL_DIR="medical-backend"
-MEDICAL_BACKEND_REMOTE="https://github.com/enrique-rodriguez/medical-backend"
+MEDICAL_DIR="medical"
+MEDICAL_BACKEND_REMOTE="https://github.com/enrique-rodriguez/medical"
 MEDICAL_FRONTEND_REMOTE="https://github.com/enrique-rodriguez/medical-frontend"
 
 
