@@ -26,16 +26,16 @@ do
 done
 
 
-mkdir "$MEDICAL_DIR" && cd "$MEDICAL_DIR"
-git clone "$MEDICAL_BACKEND_REMOTE" .
+mkdir "$MEDICAL_DIR"
+git clone "$MEDICAL_BACKEND_REMOTE" "$MEDICAL_DIR"
 cd "$MEDICAL_DIR"
 
 pipenv install
 pipenv run setup
 
-cd frontend
+git clone "$MEDICAL_FRONTEND_REMOTE" frontend
 
-git clone "$MEDICAL_FRONTEND_REMOTE" .
+cd frontend
 
 npm install
 
