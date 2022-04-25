@@ -3,6 +3,7 @@ from api.shortcuts import reverse
 from rest_framework import status
 from tests.api.test import APITestCase
 from core.provider.data_access import provider_db
+from datetime import datetime
 
 
 class TestCreateRequestAPI(APITestCase):
@@ -13,12 +14,14 @@ class TestCreateRequestAPI(APITestCase):
 
         provider_db.save({
             'full_name': "John Doe",
-            "specialty": "Specialty 1"
+            "specialty": "Specialty 1",
+            "approved": datetime.now()
         })
 
         provider_db.save({
             'full_name': "Jane Doe",
-            "specialty": "Specialty 2"
+            "specialty": "Specialty 2",
+            "approved": datetime.now()
         })
     
     def test_url_resolves(self):

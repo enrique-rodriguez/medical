@@ -1,7 +1,7 @@
 from django.test import TestCase
 from core.provider.data_access.orm_db import OrmProviderDB
 from core.provider.domain.provider import Provider
-
+from datetime import datetime
 
 class TestOrmProviderDB(TestCase):
 
@@ -12,12 +12,14 @@ class TestOrmProviderDB(TestCase):
     def create_providers_for_fetch(self):
         self.provider_db.save({
             'full_name': "ABC",
-            "specialty": "abc"
+            "specialty": "abc",
+            "approved": datetime.now()
         })
 
         self.provider_db.save({
             'full_name': "DEF",
-            "specialty": "abc"
+            "specialty": "abc",
+            "approved": datetime.now()
         })
 
     def assertInserted(self):
