@@ -39,14 +39,14 @@ class TestCreateAppointmentHandler(HandlerTestCase):
     def test_start_time_in_the_past_gives_error(self):
         self.handler.set_appointment_factory(None)
         command = self.create_command(start_time=datetime.now()-timedelta(days=1))
-        expected_error = "start_time must be a future date and time."
+        expected_error = "date must be a future date and time."
 
         self.assertHandlerRaises(self.handler, command, expected_error)
     
     def test_end_time_in_the_past_gives_error(self):
         self.handler.set_appointment_factory(None)
         command = self.create_command(end_time=datetime.now()-timedelta(days=2))
-        expected_error = "end_time must be a future date and time."
+        expected_error = "date must be a future date and time."
 
         self.assertHandlerRaises(self.handler, command, expected_error)
     

@@ -1,4 +1,3 @@
-from .sql_db import SqlProviderDB
 from .orm_db import OrmProviderDB, OrmSpecialtyDB
 
 

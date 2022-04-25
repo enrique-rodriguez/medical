@@ -10,7 +10,7 @@ from core.appointment.data_access import appointment_db
 class TestCreateRequestAPI(APITestCase):
 
     def setUp(self):
-        self.url = reverse("api:appointments:request")
+        self.url = reverse("api:appointments:create")
 
         provider_db.save({
             "full_name": 'Provider',
@@ -19,8 +19,9 @@ class TestCreateRequestAPI(APITestCase):
 
         self.post_data = {
             "provider_id": provider_db.last_inserted_id,
-            "start_time": "2023-04-18 14:00:00",
-            "end_time": "2023-04-18 15:00:00",
+            "date": "2023-04-18",
+            "start": "14:00",
+            "end": "15:00",
             "reason": "Reason for appointment",
             "full_name": "John Doe",
             "gender": "m",
@@ -44,18 +45,18 @@ class TestCreateRequestAPI(APITestCase):
         self.assertErrorMessageEquals(response, "Provider with id '100' was not found.")
 
     def test_start_time_in_the_past_gives_error(self):
-        self.post_data['start_time'] = str(datetime.now()-timedelta(days=5))
+        self.post_data['date'] = str( (datetime.now()-timedelta(days=5)).date() )
         response = self.client.post(self.url, data=self.post_data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertAppointmentNotCreated()
-        self.assertErrorMessageEquals(response, "start_time must be a future date and time.")
+        self.assertErrorMessageEquals(response, "date must be a future date and time.")
     
     def test_end_time_in_the_past_gives_error(self):
-        self.post_data['end_time'] = str(datetime.now()-timedelta(days=5))
+        self.post_data['date'] = str( (datetime.now()-timedelta(days=5)).date() )
         response = self.client.post(self.url, data=self.post_data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertAppointmentNotCreated()
-        self.assertErrorMessageEquals(response, "end_time must be a future date and time.")
+        self.assertErrorMessageEquals(response, "date must be a future date and time.")
     
     def test_invalid_dob_gives_error(self):
         self.post_data['dob'] = (datetime.now()+timedelta(days=1)).date()

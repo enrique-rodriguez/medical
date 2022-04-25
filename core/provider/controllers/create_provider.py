@@ -7,10 +7,12 @@ from core.provider.application.create_provider import CreateProviderCommand
 class CreateProviderController(Controller):
 
     def __init__(self, create_provider_handler: CreateProviderHandler, *args, **kwargs):
-        super().__init__(method="POST", status=201, data={}, *args, **kwargs)
+        super().__init__(method="POST", *args, **kwargs)
         self.create_provider_handler = create_provider_handler
 
     def dispatch(self, request):
+        self.status(201).data({})
+
         command = CreateProviderCommand(
             full_name=request.body.get("full_name"),
             specialty=request.body.get("specialty_name")

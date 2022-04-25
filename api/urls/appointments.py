@@ -3,5 +3,5 @@ from api.views import appointments
 
 
 urlpatterns = [
-    path("request/", appointments.create, name="request")
+    path("create/", appointments.create, name="create")
 ]

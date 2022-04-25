@@ -1,9 +1,8 @@
-from core.provider.domain import Provider
+from django.db.models import Q
+from django.utils.timezone import make_aware
 from api.models import ProviderModel, SpecialtyModel
 from core.provider.domain.db import ProviderDatabase
 from core.shared.data_access.orm_db import OrmDatabase
-from django.db.models import Q
-from django.utils.timezone import make_aware
 
 
 class OrmSpecialtyDB(OrmDatabase):

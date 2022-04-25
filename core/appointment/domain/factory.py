@@ -12,10 +12,8 @@ class AppointmentFactory:
         is_old_end_time = data.get("end_time") <= datetime.now(tz)
         is_future_date = data.get("dob") > datetime.today().date()
 
-        if is_old_start_time:
-            raise ValueError("start_time must be a future date and time.")
-        if is_old_end_time:
-            raise ValueError("end_time must be a future date and time.")
+        if is_old_start_time or is_old_end_time:
+            raise ValueError("date must be a future date and time.")
         if is_future_date:
             raise ValueError("Invalid DOB. Must be in the past.")
             

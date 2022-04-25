@@ -14,8 +14,8 @@ class Database(abc.ABC):
         
         def inner(self, data):
             is_entity = self.entity and isinstance(data, self.entity)
-            _data = vars(data) if is_entity else data
-            return func(self, data=_data)
+            d = vars(data) if is_entity else data
+            return func(self, data=d)
         return inner
     
     @map_to_dict
