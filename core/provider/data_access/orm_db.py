@@ -15,6 +15,12 @@ class OrmProviderDB(OrmDatabase, ProviderDatabase):
     def __init__(self, specialty_db=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.specialty_db = specialty_db or OrmSpecialtyDB()
+    
+    def count(self, exclude_non_approved=False):
+        objects = self.model.objects.get_queryset()
+        if exclude_non_approved:
+            objects = objects.filter(approved__isnull=False)
+        return objects.count()
 
     @ProviderDatabase.map_to_dict
     def save(self, data):

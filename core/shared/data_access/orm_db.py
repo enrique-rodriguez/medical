@@ -10,11 +10,8 @@ class OrmDatabase(Database):
         model, _ = self.model.objects.get_or_create(**data)
         self.last_inserted_id = model.id
     
-    def count(self, exclude_non_approved=False):
-        objects = self.model.objects.get_queryset()
-        if exclude_non_approved:
-            objects = objects.filter(approved__isnull=False)
-        return objects.count()
+    def count(self):
+        return self.model.objects.count()
     
     def find(self, id):
         objects = self.model.objects.filter(id=id)
