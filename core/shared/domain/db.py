@@ -18,9 +18,19 @@ class Database(abc.ABC):
             return func(self, data=d)
         return inner
     
+    def map_to_entities(func):
+        def inner(self, *args, **kwargs):
+            objs = func(self, *args, **kwargs)
+            return [self.to_entity(obj) for obj in objs]
+        return inner
+    
     @map_to_dict
     def save(self, data):
         self.persist(data)
+    
+    @abc.abstractmethod
+    def to_entity(self, obj):
+        pass
     
     @abc.abstractmethod
     def persist(self, data):

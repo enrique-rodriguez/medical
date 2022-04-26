@@ -34,6 +34,7 @@ class OrmProviderDB(OrmDatabase, ProviderDatabase):
 
         return models.exists()
     
+    @ProviderDatabase.map_to_entities
     def fetch(self, name=None, specialty=None, is_approved=True):
         models = self.model.objects.filter(approved__isnull=not is_approved)
         if name and specialty:
@@ -42,4 +43,4 @@ class OrmProviderDB(OrmDatabase, ProviderDatabase):
             models = models.filter(full_name__icontains=name)
         elif specialty:
             models = models.filter(specialty__name__icontains=specialty)
-        return [self.to_entity(model) for model in models]
+        return list(models)
