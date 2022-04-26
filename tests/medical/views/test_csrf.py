@@ -1,6 +1,7 @@
 from medical.views import csrf
 from django.test import TestCase
 from django.urls import resolve, reverse
+from unittest.mock import patch
 
 
 class TestIndexPage(TestCase):
@@ -13,7 +14,12 @@ class TestIndexPage(TestCase):
 
         self.assertEqual(resolution, csrf)
     
-    def test_GET(self):
+    @patch("medical.views.get_token")
+    def test_GET(self, mock_get_token):
+        mock_get_token.return_value = "csrf-token"
         response = self.client.get(self.url)
+        data = response.json()
+
         self.assertEqual(response.status_code, 200)
-        self.assertIn("token", response.json())
+        self.assertIn("token", data)
+        self.assertEqual(data.get("token"), "csrf-token")
