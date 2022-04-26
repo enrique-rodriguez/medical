@@ -2,10 +2,29 @@
 
 This project consists of building a prototype version of a Medical Provider Marketplace where people can find a doctor or other healthcare providers to book an appointment with.
 
+
+## Tech Stack
+
+Django (backend)
+Svelte (frontend)
+HTTP REST (interprocess communication)
+Django ORM (Database) using Postgres
+
+
+## Requirements
+
+[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+[Python 3](https://www.python.org/downloads/)
+
+[Pipenv](https://pipenv.pypa.io/)
+
+[NPM](https://nodejs.org/)
+
 ## Installation
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/enrique-rodriguez/medical/master/install/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/enrique-rodriguez/medical-backend/master/install/install.sh)"
 ```
 
 Paste that in a macOS Terminal or Linux shell prompt.
@@ -17,7 +36,23 @@ cd medical-backend
 pipenv run start
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+open [http://localhost:8000](http://localhost:8000) on your web browser of choice.
 
-Please make sure to update tests as appropriate.
+## Running the tests
+
+```bash
+pipenv run test
+```
+
+
+## Generate coverage report
+
+```bash
+pipenv run coverage
+```
+
+
+## Acknowledgements
+[BrainHi-Software-Engineer-Interview-Project](https://www.notion.so/brainhi/BrainHi-Software-Engineer-Interview-Project-c973a3794852449a818c82b4b6c9e714)
+
+[Medilab HTML Template](https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/) from [Bootstrap Made](https://bootstrapmade.com)
