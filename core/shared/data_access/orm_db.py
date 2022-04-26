@@ -21,15 +21,10 @@ class OrmDatabase(Database):
         if not objects.exists():
             return None
         return self.to_entity(objects[0])
-    
-    @Database.map_to_dict
-    def exists(self, data):
-        return self.model.objects.filter(**data).exists()
-    
+        
     def to_entity(self, model):
         data = {}
         for attr in inspect.getargspec(self.entity.__init__)[0][1:]:
-            if not hasattr(model, attr): continue
             model_attr = getattr(model, attr)
             data[attr] = model_attr
             if isinstance(model_attr, Model):

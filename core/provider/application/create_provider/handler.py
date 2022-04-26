@@ -1,3 +1,4 @@
+from core.provider.domain.db import ProviderDatabase
 from .request import CreateProviderCommand
 from core.shared.application import CommandHandler
 from core.provider.domain.factory import ProviderFactory
@@ -6,7 +7,7 @@ from core.shared.domain.exceptions import AlreadyExistsError
 
 class CreateProviderHandler(CommandHandler):
 
-    def __init__(self, provider_db, provider_factory=None):
+    def __init__(self, provider_db: ProviderDatabase, provider_factory: ProviderFactory=None):
         self.provider_db = provider_db
         self.set_provider_factory(provider_factory)
     
