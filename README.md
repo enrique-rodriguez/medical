@@ -43,6 +43,10 @@ pipenv run start
 
 open [http://localhost:8000](http://localhost:8000) on your web browser of choice.
 
+### Admin Login
+
+if you installed this project using the bash script above, you can login to the admin page using the user created with username "admin" and password "adminpass"
+
 ## Running the tests
 
 ```bash
