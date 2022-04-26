@@ -6,9 +6,14 @@ This project consists of building a prototype version of a Medical Provider Mark
 ## Tech Stack
 
 Django (backend)
+
 Svelte (frontend)
-HTTP REST (interprocess communication)
+
+HTTP REST
+
 Django ORM (Database) using Postgres
+
+Domain Driven Design (Architecture Patterns)
 
 
 ## Requirements
@@ -19,7 +24,7 @@ Django ORM (Database) using Postgres
 
 [Pipenv](https://pipenv.pypa.io/)
 
-[NPM](https://nodejs.org/)
+[Node JS](https://nodejs.org/)
 
 ## Installation
 

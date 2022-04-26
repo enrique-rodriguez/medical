@@ -14,7 +14,7 @@ class Database(abc.ABC):
         
         def inner(self, data):
             is_entity = self.entity and isinstance(data, self.entity)
-            d = vars(data) if is_entity else data
+            d = vars(data) if is_entity else data.copy()
             return func(self, data=d)
         return inner
     

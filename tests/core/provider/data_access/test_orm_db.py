@@ -35,6 +35,17 @@ class TestOrmProviderDB(TestCase):
         })
 
         self.assertInserted()
+    
+    def test_excludes_non_approved_providers(self):
+        self.provider_db.save({
+            'full_name': "Medical Provider",
+            "specialty": "Specialty",
+            "approved": None
+        })
+
+        count = self.provider_db.count(exclude_non_approved=True)
+
+        self.assertEqual(count, self.previous_count)
 
     def test_find_by_id_not_found_gives_none(self):
         obj = self.provider_db.find(100)

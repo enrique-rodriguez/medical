@@ -9,7 +9,6 @@ class OrmAppointmentDB(OrmDatabase, AppointmentDatabase):
 
     @OrmDatabase.map_to_dict
     def save(self, data):
-        data_to_save = data.copy()
-        data_to_save["start_time"] = make_aware(data_to_save["start_time"])
-        data_to_save["end_time"] = make_aware(data_to_save["end_time"])
-        return super().save(data_to_save)
+        data["start_time"] = make_aware(data["start_time"])
+        data["end_time"] = make_aware(data["end_time"])
+        return super().save(data)

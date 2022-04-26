@@ -18,23 +18,20 @@ class OrmProviderDB(OrmDatabase, ProviderDatabase):
 
     @ProviderDatabase.map_to_dict
     def save(self, data):
-        data_to_save = data.copy()
-        specialty = data_to_save.pop("specialty")
-        approved = data_to_save.pop("approved", None)
+        specialty = data.pop("specialty")
+        approved = data.pop("approved", None)
         if approved:
-            data_to_save["approved"] = make_aware(approved)
+            data["approved"] = make_aware(approved)
         if specialty:
             self.specialty_db.save({ "name": specialty })
-            data_to_save["specialty_id"] = self.specialty_db.last_inserted_id
-        return super().save(data_to_save)
+            data["specialty_id"] = self.specialty_db.last_inserted_id
+        return super().save(data)
     
     @ProviderDatabase.map_to_dict
     def exists(self, data):
-
-        models = self.model.objects.filter(
-            full_name=data.get("full_name"),
-            specialty__name=data.get("specialty")
-        )
+        full_name = data.get("full_name")
+        specialty = data.get("specialty")
+        models = self.model.objects.filter(full_name=full_name, specialty__name=specialty)
 
         return models.exists()
     
