@@ -20,7 +20,7 @@ Domain Driven Design (Architecture Patterns)
 
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-[Python 3](https://www.python.org/downloads/)
+[Python 3.9](https://www.python.org/downloads/)
 
 [Pipenv](https://pipenv.pypa.io/)
 
