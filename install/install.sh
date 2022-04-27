@@ -2,8 +2,8 @@
 
 REQUIRED="git pipenv npm"
 MEDICAL_DIR="medical"
+FRONTEND_DIR="medical-frontend"
 MEDICAL_BACKEND_REMOTE="https://github.com/enrique-rodriguez/medical"
-MEDICAL_FRONTEND_REMOTE="https://github.com/enrique-rodriguez/medical-frontend"
 
 
 abort() {
@@ -33,9 +33,8 @@ cd "$MEDICAL_DIR"
 pipenv install
 pipenv run setup
 
-git clone "$MEDICAL_FRONTEND_REMOTE" frontend
 
-cd frontend
+cd "$FRONTEND_DIR"
 
 npm install
 
