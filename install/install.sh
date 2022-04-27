@@ -27,7 +27,7 @@ done
 
 
 mkdir "$MEDICAL_DIR"
-git clone "$MEDICAL_BACKEND_REMOTE" "$MEDICAL_DIR"
+git clone --recurse-submodules "$MEDICAL_BACKEND_REMOTE" "$MEDICAL_DIR"
 cd "$MEDICAL_DIR"
 
 pipenv install
