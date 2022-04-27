@@ -1,0 +1,3 @@
+[submodule "medical-frontend"]
+	path = medical-frontend
+	url = https://github.com/enrique-rodriguez/medical-frontend
