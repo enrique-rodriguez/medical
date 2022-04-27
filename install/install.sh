@@ -2,7 +2,7 @@
 
 REQUIRED="git pipenv npm"
 MEDICAL_DIR="medical"
-FRONTEND_DIR="medical-frontend"
+FRONTEND_DIR="frontend"
 MEDICAL_BACKEND_REMOTE="https://github.com/enrique-rodriguez/medical"
 
 
