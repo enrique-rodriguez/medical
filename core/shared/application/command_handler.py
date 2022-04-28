@@ -3,6 +3,7 @@ from core.shared.application import Command
 
 
 class CommandHandler(abc.ABC):
+    dto_class = None
 
     def __call__(self, command: Command):
         return self.handle(command)

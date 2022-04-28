@@ -8,6 +8,6 @@ fetch = create_restframework_view(
 )
 
 create = create_restframework_view(
+    serializer=ProviderModelSerializer,
     controller=controllers.create_provider_controller,
-    serializer=ProviderModelSerializer
 )

@@ -21,6 +21,9 @@ class TestCreateProviderHandler(HandlerTestCase):
             specialty=specialty
         )
     
+    def test_handler_is_registered(self):
+        self.assertCommandRegistered(self.handler)
+    
     def test_raises_error_if_provider_already_exists(self):
         mock_provider = self.provider_factory.create.return_value
         expected_error = "A provider with the name 'Provider' and specialty 'Specialty' already exists"

@@ -3,7 +3,7 @@ from core.appointment.data_access import appointment_db
 from .create_appointment import CreateAppointmentHandler
 
 
-request_appointment_handler = CreateAppointmentHandler(
+create_appointment_handler = CreateAppointmentHandler(
     provider_db=provider_db,
     appointment_db=appointment_db
 )

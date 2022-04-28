@@ -28,8 +28,7 @@ class TestCreateRestframeworkView(TestCase):
     
 
     def test_status_and_response_data_taken_from_controller(self, mock_logging):
-        self.mock_controller.status_code = 200
-        self.mock_controller.response_data = { 'msg': 'response-data' }
+        self.mock_controller.response = 200, { 'msg': 'response-data' }
 
         request = HttpRequest()
         request.method = "POST"

@@ -30,6 +30,9 @@ class TestCreateAppointmentHandler(HandlerTestCase):
             end_time=end_time,
             start_time=start_time,
         )
+    
+    def test_handler_is_registered(self):
+        self.assertCommandRegistered(self.handler)
 
     def test_raises_error_when_provider_is_not_found(self):
         self.provider_db.find.return_value = None

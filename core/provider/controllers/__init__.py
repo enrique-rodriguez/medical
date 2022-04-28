@@ -1,11 +1,11 @@
 from .fetch_providers import FetchProvidersController
 from .create_provider import CreateProviderController
 
-from core.provider.application import (
-    fetch_providers_handler,
-    create_provider_handler,
+from core import (
+    command_bus,
+    query_bus
 )
 
 
-fetch_providers_controller = FetchProvidersController(fetch_providers_handler)
-create_provider_controller = CreateProviderController(create_provider_handler)
+fetch_providers_controller = FetchProvidersController(command_bus, query_bus)
+create_provider_controller = CreateProviderController(command_bus, query_bus)

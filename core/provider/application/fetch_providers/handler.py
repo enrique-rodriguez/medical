@@ -4,6 +4,7 @@ from core.provider.domain.db import ProviderDatabase
 
 
 class FetchProvidersHandler(QueryHandler):
+    dto_class = FetchProvidersQuery
 
     def __init__(self, provider_db: ProviderDatabase):
         self.provider_db = provider_db

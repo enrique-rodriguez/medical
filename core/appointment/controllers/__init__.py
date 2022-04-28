@@ -1,8 +1,9 @@
 from .create_appointment import CreateAppointmentController
 
-from core.appointment.application import (
-    request_appointment_handler
+
+from core import (
+    query_bus,
+    command_bus,
 )
 
-
-create_appointment_controller = CreateAppointmentController(request_appointment_handler)
+create_appointment_controller = CreateAppointmentController(command_bus, query_bus)

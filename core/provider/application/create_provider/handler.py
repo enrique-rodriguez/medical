@@ -6,6 +6,7 @@ from core.shared.domain.exceptions import AlreadyExistsError
 
 
 class CreateProviderHandler(CommandHandler):
+    dto_class = CreateProviderCommand
 
     def __init__(self, provider_db: ProviderDatabase, provider_factory: ProviderFactory=None):
         self.provider_db = provider_db

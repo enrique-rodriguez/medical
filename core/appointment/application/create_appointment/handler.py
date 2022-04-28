@@ -7,6 +7,7 @@ from core.appointment.domain.db import AppointmentDatabase
 
 
 class CreateAppointmentHandler(CommandHandler):
+    dto_class = CreateAppointmentCommand
 
     def __init__(
             self,
