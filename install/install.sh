@@ -30,7 +30,7 @@ mkdir "$MEDICAL_DIR"
 git clone --recurse-submodules "$MEDICAL_BACKEND_REMOTE" "$MEDICAL_DIR"
 cd "$MEDICAL_DIR"
 
-pipenv install
+pipenv install --dev
 pipenv run setup
 
 
