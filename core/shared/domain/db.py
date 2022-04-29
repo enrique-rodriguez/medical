@@ -28,9 +28,8 @@ class Database(abc.ABC):
     def save(self, data):
         self.persist(data)
     
-    @abc.abstractmethod
-    def to_entity(self, obj):
-        pass
+    def to_entity(self, data):
+        return self.entity(**data)
     
     @abc.abstractmethod
     def persist(self, data):

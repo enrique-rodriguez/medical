@@ -17,6 +17,7 @@ django = "*"
 djangorestframework = "*"
 gunicorn = "*"
 whitenoise = "*"
+pymongo = "*"
 
 [dev-packages]
 autopep8 = "*"
